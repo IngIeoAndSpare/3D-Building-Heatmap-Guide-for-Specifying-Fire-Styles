@@ -33,7 +33,7 @@ pip install torch==2.6.0 torchvision==0.21.0 \
     --index-url https://download.pytorch.org/whl/cu124
 
 bash scripts/setup_engine.sh
-pip install -r requirements.txt -c constraints.txt
+pip install -r requirements.txt
 ```
 
 The setup script installs the ComfyUI-based inference engine and the required
@@ -55,13 +55,13 @@ The following pretrained model weights are required.
 The required model files can be downloaded automatically:
 
 ```bash
-python scripts/download_models.py
+bash scripts/download_models.sh
 ```
 
 The downloaded files can be verified using:
 
 ```bash
-python scripts/download_models.py --check
+bash scripts/download_models.sh --check
 ```
 
 The pretrained model weights are not redistributed as part of this repository
@@ -71,6 +71,8 @@ and remain subject to their original licenses and terms of use.
 
 ```bash
 python demo.py
+or
+python demo.py --gpu 0 --host 0.0.0.0 --port 7875
 ```
 
 The demo interface is available at:
@@ -91,4 +93,5 @@ texture.png         Required
 building.mtl        Optional
 ```
 
-Multiple texture images are also supported when referenced by the material file.
+## Thanks to
+We thank the authors of [StyleCity3D](https://github.com/chenyingshu/stylecity3d) for providing the public 3D scene data. Example buildings used in our public demo were extracted and prepared from the Tokyo (Shibuya) and Los Angeles scenes released with StyleCity3D.
