@@ -1,0 +1,1147 @@
+{
+  "name": "Shibuya_T4",
+  "source_mesh": "TY_Shibuya_large_ctr_packed/TY_Shibuya_large_ctr_packed.obj",
+  "frame": "original mesh frame (OBJ as exported, metres, Y up); NOT recentred",
+  "origin_offset": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "method": "vertical footprint cut (edge-plane split + even-odd classify) + terrain removal (DTM+IDW height field, semantic road) + proximity-grouped fragment filter + exterior-visibility interior cull + broken-UV repair + UV-island atlas repack",
+  "source_polygon": {
+    "method": "dsm+osm-grouping",
+    "dsm_ids": [
+      "409",
+      "399"
+    ],
+    "file": "fp_dsm\\polygons.json",
+    "test": "T4",
+    "alt_of": null,
+    "test_point": [
+      -41.1,
+      250.0
+    ],
+    "test_note": "test point inside the final footprint",
+    "edits": [
+      {
+        "on": "409",
+        "op": "replace_chain",
+        "old": [
+          [
+            -58.543,
+            251.666
+          ],
+          [
+            -60.576,
+            246.585
+          ],
+          [
+            -59.752,
+            245.262
+          ],
+          [
+            -56.974,
+            243.261
+          ]
+        ],
+        "new": [
+          [
+            -58.543,
+            251.666
+          ],
+          [
+            -56.974,
+            243.261
+          ]
+        ],
+        "why": "remove W bump (ring vertices 33-34, up to 2.75 m outside the wall; held a NW glass-canopy fragment)",
+        "area_before_m2": 1571.53,
+        "area_after_m2": 1557.99
+      },
+      {
+        "op": "union",
+        "ids": [
+          "409",
+          "399"
+        ],
+        "why": "raster union (0.05 m) + 0.3 m closing, simplified 6 cm"
+      }
+    ]
+  },
+  "n_faces": 10361,
+  "n_vertices": 7043,
+  "n_uv": 8636,
+  "bbox_min": [
+    -63.38163,
+    -17.566046007021622,
+    225.31539477627425
+  ],
+  "bbox_max": [
+    -19.45782967188062,
+    88.130814,
+    284.421112
+  ],
+  "ground_y": -14.16295010677036,
+  "ground_y_input": -14.1725,
+  "ground_model": {
+    "model": "field",
+    "band_m": [
+      1.0,
+      8.0
+    ],
+    "cell_m": 0.5,
+    "n_band_faces": 5587,
+    "n_band_cells": 5611,
+    "n_inliers": 5455,
+    "resid_vs_dtm_median": -0.02291490943628105,
+    "resid_vs_dtm_p10": -0.44898510972702366,
+    "resid_vs_dtm_p90": 0.1565889618179654,
+    "rms": 0.10191808533130159,
+    "range_on_footprint": [
+      -17.38753809480359,
+      -12.84482545652287
+    ],
+    "ground_y_input": -14.1725,
+    "kind": "field",
+    "grid_lo": [
+      -74.68299999999999,
+      214.62
+    ],
+    "grid_res": 0.5,
+    "grid_shape": [
+      163,
+      134
+    ],
+    "ground_y_ring_median": -14.16295010677036,
+    "ground_y_ring_min": -17.38753809480359,
+    "ground_y_ring_max": -12.84482545652287,
+    "ground_y_centroid": -13.389093920315869
+  },
+  "roof_y_top": 87.8047080952381,
+  "roof_y_p99": 87.69758576869565,
+  "roof_y_max": 88.130814,
+  "height_m": 101.96765820200847,
+  "height_max_m": 102.29376410677037,
+  "height_note": "height_m = roof_y_top (3x3-median-filtered top raster max, ignores masts/slivers) - ground_y (median terrain along the footprint); height_max_m uses the highest vertex",
+  "footprint": {
+    "ring": [
+      [
+        -50.183,
+        226.12
+      ],
+      [
+        -49.533,
+        226.02
+      ],
+      [
+        -20.432999999999993,
+        231.87
+      ],
+      [
+        -19.583,
+        234.27
+      ],
+      [
+        -20.532999999999994,
+        238.62
+      ],
+      [
+        -20.532999999999994,
+        239.17
+      ],
+      [
+        -20.382999999999996,
+        239.67
+      ],
+      [
+        -20.882999999999996,
+        242.12
+      ],
+      [
+        -22.182999999999993,
+        242.67
+      ],
+      [
+        -22.382999999999996,
+        242.87
+      ],
+      [
+        -22.382999999999996,
+        243.07
+      ],
+      [
+        -21.583,
+        243.82
+      ],
+      [
+        -21.382999999999996,
+        244.97
+      ],
+      [
+        -22.182999999999993,
+        249.12
+      ],
+      [
+        -21.833,
+        249.47
+      ],
+      [
+        -20.583,
+        250.32
+      ],
+      [
+        -20.282999999999994,
+        252.27
+      ],
+      [
+        -23.682999999999993,
+        268.12
+      ],
+      [
+        -23.682999999999993,
+        268.67
+      ],
+      [
+        -23.532999999999994,
+        269.12
+      ],
+      [
+        -24.232999999999997,
+        270.27
+      ],
+      [
+        -24.182999999999993,
+        271.17
+      ],
+      [
+        -25.232999999999997,
+        276.02
+      ],
+      [
+        -27.833,
+        277.17
+      ],
+      [
+        -28.282999999999994,
+        277.52
+      ],
+      [
+        -29.183,
+        282.02
+      ],
+      [
+        -30.382999999999996,
+        284.02
+      ],
+      [
+        -35.68299999999999,
+        284.62
+      ],
+      [
+        -35.833,
+        283.62
+      ],
+      [
+        -36.033,
+        283.42
+      ],
+      [
+        -36.483,
+        283.27
+      ],
+      [
+        -48.132999999999996,
+        280.82
+      ],
+      [
+        -50.183,
+        281.32
+      ],
+      [
+        -53.882999999999996,
+        279.12
+      ],
+      [
+        -54.083,
+        279.17
+      ],
+      [
+        -54.382999999999996,
+        279.52
+      ],
+      [
+        -62.132999999999996,
+        277.87
+      ],
+      [
+        -63.683,
+        276.32
+      ],
+      [
+        -62.933,
+        272.72
+      ],
+      [
+        -62.933,
+        272.42
+      ],
+      [
+        -63.132999999999996,
+        272.22
+      ],
+      [
+        -63.483,
+        272.07
+      ],
+      [
+        -61.983,
+        269.17
+      ],
+      [
+        -62.083,
+        268.72
+      ],
+      [
+        -61.083,
+        264.17
+      ],
+      [
+        -61.183,
+        263.12
+      ],
+      [
+        -60.233,
+        258.67
+      ],
+      [
+        -60.382999999999996,
+        257.62
+      ],
+      [
+        -59.233,
+        255.42000000000002
+      ],
+      [
+        -59.283,
+        255.02
+      ],
+      [
+        -58.533,
+        251.77
+      ],
+      [
+        -57.033,
+        243.42000000000002
+      ],
+      [
+        -55.733,
+        237.32
+      ],
+      [
+        -55.632999999999996,
+        237.12
+      ],
+      [
+        -54.382999999999996,
+        236.27
+      ],
+      [
+        -54.382999999999996,
+        236.02
+      ],
+      [
+        -55.083,
+        234.97
+      ],
+      [
+        -55.132999999999996,
+        234.77
+      ],
+      [
+        -53.583,
+        227.22
+      ],
+      [
+        -52.632999999999996,
+        225.62
+      ]
+    ],
+    "holes": [],
+    "area_m2": 1938.1549999999697,
+    "buffer_m": 0.4,
+    "ring_buffered": [
+      [
+        -52.773,
+        225.25
+      ],
+      [
+        -52.993,
+        225.43
+      ],
+      [
+        -53.993,
+        227.21
+      ],
+      [
+        -55.533,
+        234.65
+      ],
+      [
+        -55.473,
+        235.07
+      ],
+      [
+        -54.833,
+        236.09
+      ],
+      [
+        -55.833,
+        236.76999999999998
+      ],
+      [
+        -55.993,
+        236.93
+      ],
+      [
+        -56.133,
+        237.23
+      ],
+      [
+        -57.453,
+        243.41
+      ],
+      [
+        -58.913000000000004,
+        251.63
+      ],
+      [
+        -59.673,
+        254.91
+      ],
+      [
+        -59.653000000000006,
+        255.37
+      ],
+      [
+        -60.773,
+        257.55
+      ],
+      [
+        -60.653000000000006,
+        258.73
+      ],
+      [
+        -61.573,
+        263.01
+      ],
+      [
+        -61.493,
+        264.21
+      ],
+      [
+        -62.473000000000006,
+        268.61
+      ],
+      [
+        -62.413000000000004,
+        269.15
+      ],
+      [
+        -63.873000000000005,
+        271.99
+      ],
+      [
+        -63.813,
+        272.28999999999996
+      ],
+      [
+        -63.693000000000005,
+        272.40999999999997
+      ],
+      [
+        -63.353,
+        272.57
+      ],
+      [
+        -63.333000000000006,
+        272.69
+      ],
+      [
+        -64.07300000000001,
+        276.21
+      ],
+      [
+        -64.053,
+        276.47
+      ],
+      [
+        -62.273,
+        278.25
+      ],
+      [
+        -54.493,
+        279.93
+      ],
+      [
+        -54.153000000000006,
+        279.87
+      ],
+      [
+        -53.893,
+        279.59
+      ],
+      [
+        -50.253,
+        281.73
+      ],
+      [
+        -50.053000000000004,
+        281.73
+      ],
+      [
+        -48.07300000000001,
+        281.25
+      ],
+      [
+        -36.613,
+        283.65
+      ],
+      [
+        -36.213,
+        283.81
+      ],
+      [
+        -36.053,
+        284.77
+      ],
+      [
+        -35.893,
+        284.97
+      ],
+      [
+        -35.753,
+        285.03
+      ],
+      [
+        -30.233000000000004,
+        284.40999999999997
+      ],
+      [
+        -30.013000000000005,
+        284.23
+      ],
+      [
+        -28.753,
+        282.05
+      ],
+      [
+        -28.513000000000005,
+        280.85
+      ],
+      [
+        -28.593000000000004,
+        280.81
+      ],
+      [
+        -28.593000000000004,
+        279.09
+      ],
+      [
+        -28.413000000000004,
+        278.19
+      ],
+      [
+        -27.073,
+        277.05
+      ],
+      [
+        -26.813000000000002,
+        277.17
+      ],
+      [
+        -25.013000000000005,
+        276.37
+      ],
+      [
+        -24.853,
+        276.17
+      ],
+      [
+        -23.773000000000003,
+        271.28999999999996
+      ],
+      [
+        -23.813000000000002,
+        270.35
+      ],
+      [
+        -23.133000000000003,
+        269.21
+      ],
+      [
+        -23.133000000000003,
+        269.03
+      ],
+      [
+        -23.273000000000003,
+        268.61
+      ],
+      [
+        -23.273000000000003,
+        268.17
+      ],
+      [
+        -20.573,
+        255.65
+      ],
+      [
+        -20.853,
+        255.43
+      ],
+      [
+        -20.893,
+        255.13
+      ],
+      [
+        -20.273000000000003,
+        252.31
+      ],
+      [
+        -20.333000000000006,
+        251.82999999999998
+      ],
+      [
+        -19.973,
+        251.59
+      ],
+      [
+        -20.153,
+        250.32999999999998
+      ],
+      [
+        -20.233000000000004,
+        250.10999999999999
+      ],
+      [
+        -21.733000000000004,
+        249.01
+      ],
+      [
+        -20.973,
+        245.09
+      ],
+      [
+        -20.973,
+        244.85
+      ],
+      [
+        -21.193000000000005,
+        243.69
+      ],
+      [
+        -21.873000000000005,
+        242.99
+      ],
+      [
+        -20.813000000000002,
+        242.54999999999998
+      ],
+      [
+        -20.533,
+        242.35
+      ],
+      [
+        -19.973,
+        239.79
+      ],
+      [
+        -19.973,
+        239.57
+      ],
+      [
+        -20.133000000000003,
+        239.10999999999999
+      ],
+      [
+        -20.133000000000003,
+        238.67
+      ],
+      [
+        -19.173000000000002,
+        234.39
+      ],
+      [
+        -19.173000000000002,
+        234.17
+      ],
+      [
+        -20.093000000000004,
+        231.65
+      ],
+      [
+        -20.413000000000004,
+        231.45
+      ],
+      [
+        -49.413000000000004,
+        225.63
+      ],
+      [
+        -50.233000000000004,
+        225.71
+      ],
+      [
+        -52.513000000000005,
+        225.23
+      ]
+    ],
+    "holes_buffered": [],
+    "exclusions": [
+      {
+        "ring": [
+          [
+            -15.634,
+            251.757
+          ],
+          [
+            -15.491,
+            251.561
+          ],
+          [
+            -13.116,
+            252.958
+          ],
+          [
+            -13.901,
+            256.013
+          ],
+          [
+            -14.649,
+            256.762
+          ],
+          [
+            -15.639,
+            257.135
+          ],
+          [
+            -18.835,
+            256.314
+          ],
+          [
+            -19.013,
+            256.566
+          ],
+          [
+            -20.826,
+            255.439
+          ],
+          [
+            -21.05,
+            254.446
+          ],
+          [
+            -20.39,
+            251.875
+          ],
+          [
+            -18.866,
+            250.927
+          ]
+        ],
+        "holes": [],
+        "margin": 0.0,
+        "id": "418",
+        "roof_y": -10.242,
+        "roof_dh": -94.06400000000001,
+        "min_dist": -0.5
+      },
+      {
+        "ring": [
+          [
+            -22.846,
+            278.977
+          ],
+          [
+            -22.629,
+            280.149
+          ],
+          [
+            -23.428,
+            281.929
+          ],
+          [
+            -24.868,
+            282.471
+          ],
+          [
+            -28.576,
+            280.806
+          ],
+          [
+            -28.576,
+            278.335
+          ],
+          [
+            -27.079,
+            277.076
+          ]
+        ],
+        "holes": [],
+        "margin": 0.0,
+        "id": "452",
+        "roof_y": -10.179,
+        "roof_dh": -94.001,
+        "min_dist": -0.20000000298023224
+      }
+    ]
+  },
+  "texture": {
+    "file": "Shibuya_T4_texture.png",
+    "n_islands": 1280,
+    "n_rects": 686,
+    "tex_w": 1688,
+    "tex_h": 1544,
+    "fill_ratio": 0.605
+  },
+  "stats": {
+    "candidates": 20774,
+    "whole_inside": 16428,
+    "straddling": 953,
+    "pieces": 2339,
+    "pieces_inside": 1126,
+    "after_cut": 18294,
+    "below_cut_straddling": 1213,
+    "below_removed_net": 1351,
+    "ground_faces_removed": 3121,
+    "of_which_semantic_road": 0,
+    "floor_faces_removed": 138,
+    "floor_area_removed_m2": 135.9497349115062,
+    "components": 58,
+    "component_groups": 3,
+    "groups_kept": 3,
+    "fragment_faces_removed": 0,
+    "fragment_area_removed": 0.0,
+    "detached_groups_kept_area": 9.835227639043296,
+    "interior_cull": {
+      "n_dirs": 128,
+      "min_elev_deg": -30.0,
+      "res_m": [
+        0.05,
+        0.05
+      ],
+      "tol_m": 0.15,
+      "n_samples": 979815,
+      "seconds": 4.29,
+      "faces_before": 13187,
+      "faces_removed": 2705,
+      "area_before_m2": 38535.23608586303,
+      "area_removed_m2": 7306.218762322702
+    },
+    "dangling_needles_removed": 121,
+    "uv_repaired_faces": 0
+  },
+  "qa": {
+    "area_total_m2": 31218.26476747633,
+    "area_vertical_m2": 26964.106864069054,
+    "area_horizontal_m2": 3536.5934794049244,
+    "near_ground_horizontal_m2": {
+      "h<1.5": 0.6560299628680281,
+      "1.5<=h<3.5": 62.496070740547935
+    },
+    "skin_outside_m2": {
+      "3-10m": 15.715797911053231,
+      "10-30m": 24.86775367831689,
+      ">=30m": 55.02354912006077,
+      "upper_half": 27.162067018815172
+    },
+    "facade_inside_band_m2": 5911.436526971129,
+    "skin_ratio": 0.016173243216470356,
+    "note": "skin_outside_m2: steep source surface 0-1.0 m outside the buffered cut (neighbour exclusion zones ignored); upper_half is the clearest 'footprint inside the wall' signal",
+    "base_gap_check": {
+      "n": 119,
+      "pkg_bottom_minus_street_median": -0.37,
+      "pkg_bottom_minus_street_p90": 0.43,
+      "frac_float_gt_1m": 0.084,
+      "frac_tool_cut_gt_1m": 0.076,
+      "frac_src_hole_gt_1m": 0.059,
+      "frac_below_street_gt_1m": 0.101,
+      "tool_cut_points": [
+        [
+          -21.6,
+          246.4,
+          1.18
+        ],
+        [
+          -32.1,
+          284.2,
+          11.71
+        ],
+        [
+          -40.4,
+          282.5,
+          10.58
+        ],
+        [
+          -42.3,
+          282.0,
+          7.89
+        ],
+        [
+          -48.1,
+          280.8,
+          3.87
+        ],
+        [
+          -61.4,
+          265.7,
+          4.14
+        ],
+        [
+          -60.5,
+          260.2,
+          8.61
+        ],
+        [
+          -57.9,
+          248.4,
+          3.33
+        ],
+        [
+          -57.6,
+          246.8,
+          4.23
+        ]
+      ],
+      "note": "street = DSM p20 1.5-6 m outside; pkg_bot / wall_bot = lowest package vertex / lowest steep source-wall vertex within 1.5 m inside the cut line; tool_cut = package stops > 1 m above the source wall bottom (or street - 0.5 m, the intended below-ground clip); float = package bottom > 1 m above the street; src_hole = source wall itself stops > 1 m above the street"
+    },
+    "facade_coverage": {
+      "overall": 0.813,
+      "edges": [
+        {
+          "edge": 1,
+          "side": "N",
+          "length_m": 29.7,
+          "street_y": -15.2,
+          "coverage": 1.0,
+          "cells": 90
+        },
+        {
+          "edge": 3,
+          "side": "E",
+          "length_m": 4.5,
+          "street_y": -14.55,
+          "coverage": 1.0,
+          "cells": 21
+        },
+        {
+          "edge": 12,
+          "side": "E",
+          "length_m": 4.2,
+          "street_y": -14.27,
+          "coverage": 1.0,
+          "cells": 490
+        },
+        {
+          "edge": 16,
+          "side": "E",
+          "length_m": 16.2,
+          "street_y": -14.22,
+          "coverage": 0.962,
+          "cells": 1500
+        },
+        {
+          "edge": 21,
+          "side": "E",
+          "length_m": 5.0,
+          "street_y": -14.18,
+          "coverage": 0.94,
+          "cells": 432
+        },
+        {
+          "edge": 24,
+          "side": "E",
+          "length_m": 4.6,
+          "street_y": -14.25,
+          "coverage": 1.0,
+          "cells": 425
+        },
+        {
+          "edge": 26,
+          "side": "S",
+          "length_m": 5.3,
+          "street_y": -14.84,
+          "coverage": 0.157,
+          "cells": 503
+        },
+        {
+          "edge": 30,
+          "side": "S",
+          "length_m": 11.9,
+          "street_y": -16.86,
+          "coverage": 0.172,
+          "cells": 1044
+        },
+        {
+          "edge": 32,
+          "side": "SW",
+          "length_m": 4.3,
+          "street_y": -13.18,
+          "coverage": 0.284,
+          "cells": 415
+        },
+        {
+          "edge": 35,
+          "side": "S",
+          "length_m": 7.9,
+          "street_y": -13.0,
+          "coverage": 0.157,
+          "cells": 664
+        },
+        {
+          "edge": 37,
+          "side": "W",
+          "length_m": 3.7,
+          "street_y": -13.0,
+          "coverage": 1.0,
+          "cells": 334
+        },
+        {
+          "edge": 41,
+          "side": "NW",
+          "length_m": 3.3,
+          "street_y": -13.41,
+          "coverage": 1.0,
+          "cells": 341
+        },
+        {
+          "edge": 43,
+          "side": "W",
+          "length_m": 4.7,
+          "street_y": -13.05,
+          "coverage": 1.0,
+          "cells": 435
+        },
+        {
+          "edge": 45,
+          "side": "W",
+          "length_m": 4.6,
+          "street_y": -13.04,
+          "coverage": 0.968,
+          "cells": 443
+        },
+        {
+          "edge": 49,
+          "side": "W",
+          "length_m": 3.3,
+          "street_y": -13.97,
+          "coverage": 0.96,
+          "cells": 371
+        },
+        {
+          "edge": 50,
+          "side": "W",
+          "length_m": 8.5,
+          "street_y": -14.03,
+          "coverage": 0.995,
+          "cells": 856
+        },
+        {
+          "edge": 51,
+          "side": "W",
+          "length_m": 6.2,
+          "street_y": -14.09,
+          "coverage": 1.0,
+          "cells": 687
+        },
+        {
+          "edge": 57,
+          "side": "W",
+          "length_m": 7.7,
+          "street_y": -14.43,
+          "coverage": 1.0,
+          "cells": 38
+        }
+      ],
+      "note": "share of 1x1 m wall cells (street+1 m .. local top-1 m) with steep package surface within -1.2..+0.6 m of each footprint edge (length-weighted overall)"
+    },
+    "trimesh_reload": {
+      "trimesh_faces": 10361,
+      "faces_match": true,
+      "has_uv": true,
+      "texture_loaded": true,
+      "texture_size": [
+        1688,
+        1544
+      ]
+    }
+  },
+  "options": {
+    "buffer": 0.4,
+    "ground_tol": 1.0,
+    "ground_test": "centroid",
+    "field_band": [
+      1.0,
+      8.0
+    ],
+    "field_cell": 0.5,
+    "field_max_resid": 1.5,
+    "field_prior_dist": 10.0,
+    "ground_cos": 0.85,
+    "flat_tol": 0.25,
+    "sem_road_tol": 3.0,
+    "cut_below": true,
+    "below_margin": 0.5,
+    "ground_mode": "field",
+    "ground_band": [
+      1.0,
+      12.0
+    ],
+    "frag_link": 0.5,
+    "frag_min_area": 2.0,
+    "frag_low_h": 2.5,
+    "frag_low_rel": 0.05,
+    "frag_rel": 0.0,
+    "weld_tol": 0.0001,
+    "tex_pad": 4,
+    "tex_dilate": 4,
+    "max_uv_ext_px": 512.0,
+    "max_tex_width": 8192,
+    "write_normals": false,
+    "cull_interior": true,
+    "cull_dirs": 128,
+    "cull_min_elev": -30.0,
+    "cull_res": null,
+    "cull_max_px": 3000,
+    "cull_tol": 0.15,
+    "floor_h": 2.5,
+    "floor_cover": 2.0,
+    "needle_alt": 0.15,
+    "needle_len": 0.5,
+    "qa": true,
+    "qa_band": 1.0
+  },
+  "timings_s": {
+    "buffer": 0.052,
+    "cut": 0.108,
+    "ground": 0.298,
+    "fragments": 0.181,
+    "cull": 4.397,
+    "dedup": 0.014,
+    "texture": 0.363,
+    "qa": 0.147,
+    "write": 0.169,
+    "total": 5.801
+  },
+  "identity": {
+    "fp_osm_id": "261",
+    "osm_id": "way/140493157",
+    "name": "渋谷インフォスタワー",
+    "name_en": "Shibuya Infoss Tower",
+    "levels": "21",
+    "height_tag": "89.2",
+    "building": "commercial",
+    "attribution": "(c) OpenStreetMap contributors, ODbL"
+  },
+  "selection_reason": "Hybrid: DSM boundaries (409 tower, W bump removed) + OSM grouping: OSM way 140493157 (Shibuya Infoss Tower) includes the glazed north entrance atrium = DSM 399, so 409+399 are merged into one building. OSM 261 geometry rejected (undersized, cuts S/W/E facades open). Tower-only variant in _alternatives.",
+  "produced_by": "make_final_packages.py"
+}

@@ -1,0 +1,1091 @@
+{
+  "name": "LA_B120",
+  "source_mesh": "LA_Downtown_large_ctr_packed/LA_Downtown_large_ctr_packed.obj",
+  "frame": "original mesh frame (OBJ as exported, metres, Y up); NOT recentred",
+  "origin_offset": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "method": "vertical footprint cut (edge-plane split + even-odd classify) + terrain removal (DTM+IDW height field, semantic road) + proximity-grouped fragment filter + exterior-visibility interior cull + broken-UV repair + UV-island atlas repack",
+  "source_polygon": {
+    "method": "dsm",
+    "dsm_ids": [
+      "120"
+    ],
+    "file": "fp_dsm\\polygons.json",
+    "footprint_mode": "tallrect",
+    "footprint": {
+      "mode": "tallrect",
+      "raw_area_m2": 1739.8,
+      "tall_frac": 0.4,
+      "tall_area_m2": 1666.3,
+      "label_area_m2": 1729.6,
+      "rect_center": [
+        -136.96,
+        49.33
+      ],
+      "rect_wh": [
+        44.97,
+        37.98
+      ],
+      "rect_angle": 38.35,
+      "area_m2": 1708.1,
+      "new_ring_vs_raw_m": {
+        "max_outside_raw": 1.4,
+        "max_inside_raw": 3.5,
+        "raw_max_outside_new": 3.62
+      }
+    },
+    "edits": [
+      {
+        "op": "footprint_tallrect",
+        "on": "120",
+        "ring_before": [
+          [
+            -142.665,
+            21.43
+          ],
+          [
+            -141.562,
+            21.68
+          ],
+          [
+            -125.812,
+            33.93
+          ],
+          [
+            -110.062,
+            46.68
+          ],
+          [
+            -108.437,
+            48.805
+          ],
+          [
+            -123.239,
+            68.106
+          ],
+          [
+            -122.437,
+            69.555
+          ],
+          [
+            -122.739,
+            70.356
+          ],
+          [
+            -123.812,
+            71.43
+          ],
+          [
+            -125.864,
+            71.481
+          ],
+          [
+            -126.989,
+            72.606
+          ],
+          [
+            -128.187,
+            74.555
+          ],
+          [
+            -128.489,
+            77.356
+          ],
+          [
+            -129.864,
+            78.231
+          ],
+          [
+            -134.665,
+            75.68
+          ],
+          [
+            -142.165,
+            69.18
+          ],
+          [
+            -144.415,
+            69.68
+          ],
+          [
+            -146.165,
+            68.93
+          ],
+          [
+            -148.665,
+            68.93
+          ],
+          [
+            -154.989,
+            61.606
+          ],
+          [
+            -155.239,
+            60.356
+          ],
+          [
+            -158.489,
+            58.106
+          ],
+          [
+            -160.489,
+            54.606
+          ],
+          [
+            -164.739,
+            50.856
+          ],
+          [
+            -164.989,
+            50.106
+          ],
+          [
+            -163.989,
+            47.253
+          ],
+          [
+            -144.489,
+            22.753
+          ]
+        ],
+        "ring_after": [
+          [
+            -166.374,
+            50.27
+          ],
+          [
+            -142.81,
+            20.482
+          ],
+          [
+            -107.539,
+            48.383
+          ],
+          [
+            -131.103,
+            78.171
+          ]
+        ],
+        "info": {
+          "mode": "tallrect",
+          "raw_area_m2": 1739.8,
+          "tall_frac": 0.4,
+          "tall_area_m2": 1666.3,
+          "label_area_m2": 1729.6,
+          "rect_center": [
+            -136.96,
+            49.33
+          ],
+          "rect_wh": [
+            44.97,
+            37.98
+          ],
+          "rect_angle": 38.35,
+          "area_m2": 1708.1,
+          "new_ring_vs_raw_m": {
+            "max_outside_raw": 1.4,
+            "max_inside_raw": 3.5,
+            "raw_max_outside_new": 3.62
+          }
+        },
+        "why": "min-area rectangle of the TALL part of the fp_dsm label (cells with nDSM >= 0.4 h, opened 1 m): drops low appendages / canopy / tree bulges the DSM label merged in, follows the straight walls"
+      }
+    ],
+    "base_cut_m": null,
+    "street_y": 55.499
+  },
+  "n_faces": 11252,
+  "n_vertices": 8143,
+  "n_uv": 11162,
+  "bbox_min": [
+    -165.384186,
+    53.54209490134084,
+    21.024837
+  ],
+  "bbox_max": [
+    -108.204605,
+    138.458923,
+    77.73523155701892
+  ],
+  "ground_y": 55.29456739601042,
+  "ground_y_input": 55.499,
+  "ground_model": {
+    "model": "field",
+    "band_m": [
+      1.0,
+      8.0
+    ],
+    "cell_m": 0.5,
+    "n_band_faces": 6540,
+    "n_band_cells": 4259,
+    "n_inliers": 4257,
+    "resid_vs_dtm_median": -0.043876262724282356,
+    "resid_vs_dtm_p10": -0.5623032445149064,
+    "resid_vs_dtm_p90": 0.09237491796975235,
+    "rms": 0.09985196816658501,
+    "range_on_footprint": [
+      54.29121665956644,
+      56.99097823787773
+    ],
+    "ground_y_input": 55.499,
+    "kind": "field",
+    "grid_lo": [
+      -177.37400817871094,
+      9.481973648071289
+    ],
+    "grid_res": 0.5,
+    "grid_shape": [
+      161,
+      163
+    ],
+    "ground_y_ring_median": 55.29456739601042,
+    "ground_y_ring_min": 54.043321969361834,
+    "ground_y_ring_max": 57.076943836546604,
+    "ground_y_centroid": 55.23488672217768
+  },
+  "roof_y_top": 138.1005746875,
+  "roof_y_p99": 138.04729150080001,
+  "roof_y_max": 138.458923,
+  "height_m": 82.80600729148958,
+  "height_max_m": 83.16435560398958,
+  "height_note": "height_m = roof_y_top (3x3-median-filtered top raster max, ignores masts/slivers) - ground_y (median terrain along the footprint); height_max_m uses the highest vertex",
+  "footprint": {
+    "ring": [
+      [
+        -166.37400817871094,
+        50.26952362060547
+      ],
+      [
+        -142.8102264404297,
+        20.48197364807129
+      ],
+      [
+        -107.53935241699219,
+        48.383399963378906
+      ],
+      [
+        -131.10313415527344,
+        78.17095184326172
+      ]
+    ],
+    "holes": [],
+    "area_m2": 1708.0960985378479,
+    "buffer_m": 0.4,
+    "ring_buffered": [
+      [
+        -142.88400817871096,
+        20.09197364807129
+      ],
+      [
+        -143.02400817871094,
+        20.15197364807129
+      ],
+      [
+        -166.52400817871094,
+        49.81197364807129
+      ],
+      [
+        -166.74400817871094,
+        50.131973648071295
+      ],
+      [
+        -166.76400817871095,
+        50.351973648071294
+      ],
+      [
+        -166.70400817871095,
+        50.491973648071294
+      ],
+      [
+        -131.56400817871094,
+        78.3319736480713
+      ],
+      [
+        -131.24400817871094,
+        78.5519736480713
+      ],
+      [
+        -131.02400817871094,
+        78.57197364807129
+      ],
+      [
+        -130.88400817871096,
+        78.51197364807129
+      ],
+      [
+        -107.38400817871096,
+        48.851973648071294
+      ],
+      [
+        -107.16400817871094,
+        48.531973648071286
+      ],
+      [
+        -107.14400817871095,
+        48.31197364807129
+      ],
+      [
+        -107.36400817871095,
+        48.01197364807129
+      ],
+      [
+        -111.08400817871095,
+        45.07197364807129
+      ],
+      [
+        -111.62400817871094,
+        45.17197364807129
+      ],
+      [
+        -134.90400817871094,
+        26.75197364807129
+      ],
+      [
+        -135.00400817871093,
+        26.65197364807129
+      ],
+      [
+        -135.00400817871093,
+        26.15197364807129
+      ],
+      [
+        -135.64400817871095,
+        25.65197364807129
+      ],
+      [
+        -135.98400817871095,
+        25.89197364807129
+      ],
+      [
+        -141.32400817871095,
+        21.67197364807129
+      ],
+      [
+        -141.56400817871094,
+        21.31197364807129
+      ],
+      [
+        -141.44400817871096,
+        21.05197364807129
+      ],
+      [
+        -142.52400817871094,
+        20.19197364807129
+      ],
+      [
+        -142.72400817871096,
+        20.09197364807129
+      ]
+    ],
+    "holes_buffered": [],
+    "exclusions": [
+      {
+        "ring": [
+          [
+            -132.715,
+            13.648
+          ],
+          [
+            -132.478,
+            15.068
+          ],
+          [
+            -130.504,
+            16.683
+          ],
+          [
+            -130.239,
+            17.856
+          ],
+          [
+            -131.558,
+            21.286
+          ],
+          [
+            -131.636,
+            21.355
+          ],
+          [
+            -133.925,
+            24.153
+          ],
+          [
+            -133.843,
+            24.316
+          ],
+          [
+            -136.25,
+            26.081
+          ],
+          [
+            -139.775,
+            23.197
+          ],
+          [
+            -140.182,
+            23.439
+          ],
+          [
+            -141.54,
+            21.305
+          ],
+          [
+            -139.864,
+            18.018
+          ],
+          [
+            -139.565,
+            18.151
+          ],
+          [
+            -136.749,
+            14.71
+          ],
+          [
+            -136.777,
+            14.581
+          ],
+          [
+            -134.033,
+            12.569
+          ]
+        ],
+        "holes": [],
+        "margin": 0.0,
+        "id": "110",
+        "roof_y": 62.399,
+        "roof_dh": -75.155,
+        "min_dist": -0.7071067690849304
+      },
+      {
+        "ring": [
+          [
+            -129.415,
+            17.93
+          ],
+          [
+            -128.312,
+            18.18
+          ],
+          [
+            -123.312,
+            21.93
+          ],
+          [
+            -106.312,
+            35.43
+          ],
+          [
+            -104.614,
+            35.378
+          ],
+          [
+            -103.239,
+            36.253
+          ],
+          [
+            -103.239,
+            37.856
+          ],
+          [
+            -104.614,
+            38.731
+          ],
+          [
+            -105.562,
+            38.68
+          ],
+          [
+            -110.562,
+            44.93
+          ],
+          [
+            -111.665,
+            45.18
+          ],
+          [
+            -112.915,
+            44.68
+          ],
+          [
+            -134.989,
+            26.856
+          ],
+          [
+            -134.989,
+            25.253
+          ],
+          [
+            -131.239,
+            20.753
+          ],
+          [
+            -130.989,
+            19.003
+          ]
+        ],
+        "holes": [],
+        "margin": 0.0,
+        "id": "117",
+        "roof_y": 66.562,
+        "roof_dh": -70.992,
+        "min_dist": -0.5
+      }
+    ]
+  },
+  "texture": {
+    "file": "LA_B120_texture.png",
+    "n_islands": 2273,
+    "n_rects": 780,
+    "tex_w": 1916,
+    "tex_h": 1700,
+    "fill_ratio": 0.574
+  },
+  "stats": {
+    "candidates": 23829,
+    "whole_inside": 16179,
+    "straddling": 732,
+    "pieces": 1664,
+    "pieces_inside": 824,
+    "after_cut": 17445,
+    "below_cut_straddling": 835,
+    "below_removed_net": 1569,
+    "ground_faces_removed": 1663,
+    "of_which_semantic_road": 0,
+    "floor_faces_removed": 23,
+    "floor_area_removed_m2": 35.52795389534236,
+    "components": 192,
+    "component_groups": 32,
+    "groups_kept": 27,
+    "fragment_faces_removed": 10,
+    "fragment_area_removed": 7.740724827348904,
+    "detached_groups_kept_area": 131.22060079621588,
+    "interior_cull": {
+      "n_dirs": 128,
+      "min_elev_deg": -30.0,
+      "res_m": [
+        0.05,
+        0.05
+      ],
+      "tol_m": 0.15,
+      "n_samples": 1028343,
+      "seconds": 4.47,
+      "faces_before": 13799,
+      "faces_removed": 2379,
+      "area_before_m2": 42572.84832183964,
+      "area_removed_m2": 7920.308851492897
+    },
+    "dangling_needles_removed": 168,
+    "uv_repaired_faces": 0
+  },
+  "qa": {
+    "area_total_m2": 34629.584285717676,
+    "area_vertical_m2": 29279.24206352006,
+    "area_horizontal_m2": 4959.380560744277,
+    "near_ground_horizontal_m2": {
+      "h<1.5": 0.0,
+      "1.5<=h<3.5": 0.0
+    },
+    "skin_outside_m2": {
+      "3-10m": 346.4274309349165,
+      "10-30m": 2.6383319944499317,
+      ">=30m": 0.0,
+      "upper_half": 0.0
+    },
+    "facade_inside_band_m2": 4571.071909268325,
+    "skin_ratio": 0.07636409355573671,
+    "note": "skin_outside_m2: steep source surface 0-1.0 m outside the buffered cut (neighbour exclusion zones ignored); upper_half is the clearest 'footprint inside the wall' signal",
+    "trimesh_reload": {
+      "trimesh_faces": 11252,
+      "faces_match": true,
+      "has_uv": true,
+      "texture_loaded": true,
+      "texture_size": [
+        1916,
+        1700
+      ]
+    },
+    "facade_metrics": {
+      "facade_sharpness": 9.06,
+      "facade_sharpness_min_side": 4.29,
+      "window_regularity": 0.789,
+      "per_side": [
+        {
+          "sharpness": 4.29,
+          "regularity": 0.719,
+          "reg_v": 0.849,
+          "reg_h": 0.589,
+          "px": 211117,
+          "azimuth": 38.2,
+          "facade_area_m2": 7760.0,
+          "side": "NE"
+        },
+        {
+          "sharpness": 12.89,
+          "regularity": 0.841,
+          "reg_v": 0.901,
+          "reg_h": 0.782,
+          "px": 233064,
+          "azimuth": 218.1,
+          "facade_area_m2": 6663.0,
+          "side": "SW"
+        },
+        {
+          "sharpness": 13.78,
+          "regularity": 0.838,
+          "reg_v": 0.904,
+          "reg_h": 0.771,
+          "px": 199852,
+          "azimuth": 128.5,
+          "facade_area_m2": 6095.0,
+          "side": "SE"
+        },
+        {
+          "sharpness": 6.15,
+          "regularity": 0.772,
+          "reg_v": 0.872,
+          "reg_h": 0.671,
+          "px": 190926,
+          "azimuth": 308.3,
+          "facade_area_m2": 5947.0,
+          "side": "NW"
+        }
+      ],
+      "texel_density_px_per_m": 6.13,
+      "facade_dirs": [
+        {
+          "azimuth": 38.2,
+          "area_m2": 7760.0,
+          "side": "NE"
+        },
+        {
+          "azimuth": 218.1,
+          "area_m2": 6663.0,
+          "side": "SW"
+        },
+        {
+          "azimuth": 128.5,
+          "area_m2": 6095.0,
+          "side": "SE"
+        },
+        {
+          "azimuth": 308.3,
+          "area_m2": 5947.0,
+          "side": "NW"
+        }
+      ],
+      "facade_png_views": [
+        {
+          "azimuth": 38.2,
+          "side": "NE"
+        },
+        {
+          "azimuth": 128.5,
+          "side": "SE"
+        }
+      ]
+    },
+    "base_gap_check": {
+      "n": 51,
+      "pkg_bottom_minus_street_median": -0.53,
+      "pkg_bottom_minus_street_p90": 0.08,
+      "frac_float_gt_1m": 0.098,
+      "frac_tool_cut_gt_1m": 0.039,
+      "frac_src_hole_gt_1m": 0.098,
+      "frac_below_street_gt_1m": 0.098,
+      "tool_cut_points": [
+        [
+          -158.9,
+          40.9,
+          2.77,
+          56.95,
+          48.11,
+          59.22
+        ],
+        [
+          -157.7,
+          39.3,
+          12.37,
+          56.72,
+          56.03,
+          68.59
+        ]
+      ],
+      "note": "ported from shibuya make_final_packages.base_gap_check; tool_cut_points = [x, z, cut gap, street, src wall bottom, pkg bottom]"
+    },
+    "facade_coverage": {
+      "overall": 0.958,
+      "edges": [
+        {
+          "edge": 0,
+          "side": "NW",
+          "length_m": 38.0,
+          "street_y": 56.46,
+          "coverage": 0.927,
+          "cells": 2990
+        },
+        {
+          "edge": 1,
+          "side": "NE",
+          "length_m": 45.0,
+          "street_y": 55.56,
+          "coverage": 0.995,
+          "cells": 3575
+        },
+        {
+          "edge": 2,
+          "side": "SE",
+          "length_m": 38.0,
+          "street_y": 54.34,
+          "coverage": 0.995,
+          "cells": 3066
+        },
+        {
+          "edge": 3,
+          "side": "SW",
+          "length_m": 45.0,
+          "street_y": 55.36,
+          "coverage": 0.916,
+          "cells": 3587
+        }
+      ],
+      "note": "share of 1x1 m wall cells (street+1 m .. local top-1 m) with steep package surface within -1.2..+0.6 m of each footprint edge (length-weighted overall)"
+    },
+    "facade_coverage_pkg": {
+      "overall": 0.958,
+      "edges": [
+        {
+          "edge": 0,
+          "length_m": 38.0,
+          "coverage": 0.928
+        },
+        {
+          "edge": 1,
+          "length_m": 45.0,
+          "coverage": 0.995
+        },
+        {
+          "edge": 2,
+          "length_m": 38.0,
+          "coverage": 0.995
+        },
+        {
+          "edge": 3,
+          "length_m": 45.0,
+          "coverage": 0.917
+        }
+      ],
+      "note": "share of 1x1 m wall cells (package ground + 1 m .. local top - 1 m) on footprint edges >= 5 m with steep package surface within -1.2..+0.6 m"
+    },
+    "closure_profile": {
+      "min_closure_above_2m": 0.97,
+      "mean_closure_above_2m": 0.999,
+      "max_outside_share": 0.0,
+      "rows": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          1.0,
+          0.0
+        ],
+        [
+          4.0,
+          1.0,
+          0.0
+        ],
+        [
+          6.0,
+          1.0,
+          0.0
+        ],
+        [
+          8.0,
+          1.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0,
+          0.0
+        ],
+        [
+          12.0,
+          1.0,
+          0.0
+        ],
+        [
+          14.0,
+          1.0,
+          0.0
+        ],
+        [
+          16.0,
+          1.0,
+          0.0
+        ],
+        [
+          18.0,
+          1.0,
+          0.0
+        ],
+        [
+          20.0,
+          1.0,
+          0.0
+        ],
+        [
+          22.0,
+          1.0,
+          0.0
+        ],
+        [
+          24.0,
+          1.0,
+          0.0
+        ],
+        [
+          26.0,
+          1.0,
+          0.0
+        ],
+        [
+          28.0,
+          1.0,
+          0.0
+        ],
+        [
+          30.0,
+          1.0,
+          0.0
+        ],
+        [
+          32.0,
+          1.0,
+          0.0
+        ],
+        [
+          34.0,
+          1.0,
+          0.0
+        ],
+        [
+          36.0,
+          1.0,
+          0.0
+        ],
+        [
+          38.0,
+          1.0,
+          0.0
+        ],
+        [
+          40.0,
+          1.0,
+          0.0
+        ],
+        [
+          42.0,
+          1.0,
+          0.0
+        ],
+        [
+          44.0,
+          1.0,
+          0.0
+        ],
+        [
+          46.0,
+          1.0,
+          0.0
+        ],
+        [
+          48.0,
+          1.0,
+          0.0
+        ],
+        [
+          50.0,
+          1.0,
+          0.0
+        ],
+        [
+          52.0,
+          1.0,
+          0.0
+        ],
+        [
+          54.0,
+          1.0,
+          0.0
+        ],
+        [
+          56.0,
+          1.0,
+          0.0
+        ],
+        [
+          58.0,
+          1.0,
+          0.0
+        ],
+        [
+          60.0,
+          1.0,
+          0.0
+        ],
+        [
+          62.0,
+          1.0,
+          0.0
+        ],
+        [
+          64.0,
+          1.0,
+          0.0
+        ],
+        [
+          66.0,
+          1.0,
+          0.0
+        ],
+        [
+          68.0,
+          1.0,
+          0.0
+        ],
+        [
+          70.0,
+          1.0,
+          0.0
+        ],
+        [
+          72.0,
+          1.0,
+          0.0
+        ],
+        [
+          74.0,
+          0.97,
+          0.0
+        ],
+        [
+          76.0,
+          0.967,
+          0.0
+        ],
+        [
+          78.0,
+          0.952,
+          0.0
+        ],
+        [
+          80.0,
+          0.955,
+          0.0
+        ]
+      ],
+      "note": "rows = [m above package ground, closure, share of steep surface > 1.5 m outside the mid-height hull]; body = 2 m .. 90 % of the height"
+    }
+  },
+  "options": {
+    "buffer": 0.4,
+    "ground_tol": 1.0,
+    "ground_test": "centroid",
+    "field_band": [
+      1.0,
+      8.0
+    ],
+    "field_cell": 0.5,
+    "field_max_resid": 1.5,
+    "field_prior_dist": 10.0,
+    "ground_cos": 0.85,
+    "flat_tol": 0.25,
+    "sem_road_tol": 3.0,
+    "cut_below": true,
+    "below_margin": 0.5,
+    "ground_mode": "field",
+    "ground_band": [
+      1.0,
+      12.0
+    ],
+    "frag_link": 0.5,
+    "frag_min_area": 2.0,
+    "frag_low_h": 2.5,
+    "frag_low_rel": 0.05,
+    "frag_rel": 0.0,
+    "weld_tol": 0.0001,
+    "tex_pad": 4,
+    "tex_dilate": 4,
+    "max_uv_ext_px": 512.0,
+    "max_tex_width": 8192,
+    "write_normals": false,
+    "cull_interior": true,
+    "cull_dirs": 128,
+    "cull_min_elev": -30.0,
+    "cull_res": null,
+    "cull_max_px": 3000,
+    "cull_tol": 0.15,
+    "floor_h": 2.5,
+    "floor_cover": 2.0,
+    "needle_alt": 0.15,
+    "needle_len": 0.5,
+    "qa": true,
+    "qa_band": 1.0
+  },
+  "timings_s": {
+    "buffer": 0.062,
+    "cut": 0.086,
+    "ground": 0.31,
+    "fragments": 0.219,
+    "cull": 4.569,
+    "dedup": 0.025,
+    "texture": 0.45,
+    "qa": 0.162,
+    "write": 0.225,
+    "total": 6.169
+  },
+  "city": "LA Downtown (LA_Downtown_large_ctr_packed)",
+  "identity": null,
+  "known_as": null,
+  "street_y": 55.499,
+  "base_cut_above_street_m": null,
+  "selection": {
+    "judge_scores": {
+      "shape": 9.0,
+      "windows": 6.0,
+      "extraction": 8.0,
+      "aggregate": 7.65
+    },
+    "why": "The most cube-like tall candidate: 45 x 38 m, 83 m, flattest walls of all (cross-section 0.96-1.02 base to roof); flush louvred crown hides the roof plant. SE and SW faces have a crisp, very regular window grid.",
+    "remaining_issues": "Texture only: a baked shadow over the lower ~40 % of SW, a dark smeared vertical band over ~1/3 of NE, soft NW, street trees baked into the SE base."
+  },
+  "produced_by": "selected_buildings/make_selected.py (city tool chain: la_split/extract_building.py; settings = shibuya make_final_packages.py OPTS + NEIGHBOUR_RULE)",
+  "neighbour_rule": {
+    "touch": 1.5,
+    "taller_dh": 2.0,
+    "taller_margin": 0.5,
+    "lower_margin": 0.0
+  },
+  "exclusions": [
+    {
+      "id": "110",
+      "margin": 0.0,
+      "roof_dh": -75.16,
+      "min_dist": -0.71
+    },
+    {
+      "id": "117",
+      "margin": 0.0,
+      "roof_dh": -70.99,
+      "min_dist": -0.5
+    }
+  ],
+  "height_above_street_m": 82.6
+}

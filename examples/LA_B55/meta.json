@@ -1,0 +1,1284 @@
+{
+  "name": "LA_B55",
+  "source_mesh": "LA_Downtown_large_ctr_packed/LA_Downtown_large_ctr_packed.obj",
+  "frame": "original mesh frame (OBJ as exported, metres, Y up); NOT recentred",
+  "origin_offset": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "method": "vertical footprint cut (edge-plane split + even-odd classify) + terrain removal (DTM+IDW height field, semantic road) + proximity-grouped fragment filter + exterior-visibility interior cull + broken-UV repair + UV-island atlas repack",
+  "source_polygon": {
+    "method": "dsm",
+    "dsm_ids": [
+      "55"
+    ],
+    "file": "fp_dsm\\polygons.json",
+    "footprint_mode": "raw",
+    "footprint": {
+      "mode": "raw",
+      "area_m2": 2736.4
+    },
+    "edits": [],
+    "base_cut_m": null,
+    "street_y": 56.949
+  },
+  "n_faces": 13725,
+  "n_vertices": 8088,
+  "n_uv": 9383,
+  "bbox_min": [
+    -119.581955,
+    55.81523191840175,
+    -100.747185
+  ],
+  "bbox_max": [
+    -41.456982,
+    273.81308,
+    -28.170275
+  ],
+  "ground_y": 56.92117485414734,
+  "ground_y_input": 56.949,
+  "ground_model": {
+    "model": "field",
+    "band_m": [
+      1.0,
+      8.0
+    ],
+    "cell_m": 0.5,
+    "n_band_faces": 4232,
+    "n_band_cells": 6526,
+    "n_inliers": 6498,
+    "resid_vs_dtm_median": 0.0075787998859127015,
+    "resid_vs_dtm_p10": -0.12395116322365637,
+    "resid_vs_dtm_p90": 0.23071503301167695,
+    "rms": 0.08309174373584201,
+    "range_on_footprint": [
+      56.553161109442584,
+      57.28969742175697
+    ],
+    "ground_y_input": 56.949,
+    "kind": "field",
+    "grid_lo": [
+      -130.489,
+      -111.622
+    ],
+    "grid_res": 0.5,
+    "grid_shape": [
+      190,
+      201
+    ],
+    "ground_y_ring_median": 56.92117485414734,
+    "ground_y_ring_min": 56.279849055817735,
+    "ground_y_ring_max": 58.791136957778974,
+    "ground_y_centroid": 56.81806696226783
+  },
+  "roof_y_top": 273.8124286666667,
+  "roof_y_p99": 269.5119362218182,
+  "roof_y_max": 273.81308,
+  "height_m": 216.89125381251932,
+  "height_max_m": 216.89190514585266,
+  "height_note": "height_m = roof_y_top (3x3-median-filtered top raster max, ignores masts/slivers) - ground_y (median terrain along the footprint); height_max_m uses the highest vertex",
+  "footprint": {
+    "ring": [
+      [
+        -96.114,
+        -100.622
+      ],
+      [
+        -89.562,
+        -96.32
+      ],
+      [
+        -41.989,
+        -58.997
+      ],
+      [
+        -41.739,
+        -57.894
+      ],
+      [
+        -42.489,
+        -56.394
+      ],
+      [
+        -64.062,
+        -28.57
+      ],
+      [
+        -64.864,
+        -28.269
+      ],
+      [
+        -66.165,
+        -28.82
+      ],
+      [
+        -71.165,
+        -32.32
+      ],
+      [
+        -119.239,
+        -69.644
+      ],
+      [
+        -119.489,
+        -70.747
+      ],
+      [
+        -118.489,
+        -72.747
+      ],
+      [
+        -98.239,
+        -98.997
+      ]
+    ],
+    "holes": [],
+    "area_m2": 2736.4328124999993,
+    "buffer_m": 0.4,
+    "ring_buffered": [
+      [
+        -96.28472500000001,
+        -100.982725
+      ],
+      [
+        -98.61504166666668,
+        -99.20225833333333
+      ],
+      [
+        -118.75002500000001,
+        -73.097475
+      ],
+      [
+        -119.87590833333334,
+        -70.87189166666667
+      ],
+      [
+        -119.87590833333334,
+        -70.583875
+      ],
+      [
+        -119.61407500000001,
+        -69.45799166666667
+      ],
+      [
+        -118.75002500000001,
+        -68.72485833333334
+      ],
+      [
+        -71.30582500000001,
+        -31.911091666666678
+      ],
+      [
+        -66.40954166666668,
+        -28.481075000000004
+      ],
+      [
+        -64.99564166666667,
+        -27.87885833333334
+      ],
+      [
+        -64.73380833333334,
+        -27.87885833333334
+      ],
+      [
+        -63.92212500000001,
+        -28.166875000000005
+      ],
+      [
+        -63.68647500000001,
+        -28.35015833333334
+      ],
+      [
+        -42.21614166666667,
+        -56.052125000000004
+      ],
+      [
+        -41.35209166666668,
+        -57.75404166666667
+      ],
+      [
+        -41.35209166666668,
+        -58.04205833333334
+      ],
+      [
+        -41.61392500000001,
+        -59.16794166666667
+      ],
+      [
+        -41.77102500000001,
+        -59.35122500000001
+      ],
+      [
+        -89.11049166666668,
+        -96.505375
+      ],
+      [
+        -95.99670833333334,
+        -101.00890833333334
+      ]
+    ],
+    "holes_buffered": [],
+    "exclusions": []
+  },
+  "texture": {
+    "file": "LA_B55_texture.png",
+    "n_islands": 1285,
+    "n_rects": 528,
+    "tex_w": 2144,
+    "tex_h": 1944,
+    "fill_ratio": 0.632
+  },
+  "stats": {
+    "candidates": 19455,
+    "whole_inside": 16918,
+    "straddling": 205,
+    "pieces": 472,
+    "pieces_inside": 205,
+    "after_cut": 17240,
+    "below_cut_straddling": 435,
+    "below_removed_net": 1936,
+    "ground_faces_removed": 855,
+    "of_which_semantic_road": 0,
+    "floor_faces_removed": 3,
+    "floor_area_removed_m2": 29.857818392126802,
+    "components": 60,
+    "component_groups": 3,
+    "groups_kept": 1,
+    "fragment_faces_removed": 2,
+    "fragment_area_removed": 5.70972803916052,
+    "detached_groups_kept_area": 0.0,
+    "interior_cull": {
+      "n_dirs": 128,
+      "min_elev_deg": -30.0,
+      "res_m": [
+        0.05,
+        0.07615398152669271
+      ],
+      "tol_m": 0.15,
+      "n_samples": 1322230,
+      "seconds": 3.38,
+      "faces_before": 14022,
+      "faces_removed": 263,
+      "area_before_m2": 57016.5720753449,
+      "area_removed_m2": 204.90698910279576
+    },
+    "dangling_needles_removed": 34,
+    "uv_repaired_faces": 0
+  },
+  "qa": {
+    "area_total_m2": 56805.91997684914,
+    "area_vertical_m2": 51635.72424339119,
+    "area_horizontal_m2": 4816.542750751318,
+    "near_ground_horizontal_m2": {
+      "h<1.5": 0.0,
+      "1.5<=h<3.5": 0.0
+    },
+    "skin_outside_m2": {
+      "3-10m": 0.0,
+      "10-30m": 0.0,
+      ">=30m": 0.0,
+      "upper_half": 0.0
+    },
+    "facade_inside_band_m2": 19079.43509507299,
+    "skin_ratio": 0.0,
+    "note": "skin_outside_m2: steep source surface 0-1.0 m outside the buffered cut (neighbour exclusion zones ignored); upper_half is the clearest 'footprint inside the wall' signal",
+    "trimesh_reload": {
+      "trimesh_faces": 13725,
+      "faces_match": true,
+      "has_uv": true,
+      "texture_loaded": true,
+      "texture_size": [
+        2144,
+        1944
+      ]
+    },
+    "facade_metrics": {
+      "facade_sharpness": 6.56,
+      "facade_sharpness_min_side": 3.55,
+      "window_regularity": 0.6,
+      "per_side": [
+        {
+          "sharpness": 9.16,
+          "regularity": 0.673,
+          "reg_v": 0.515,
+          "reg_h": 0.83,
+          "px": 1122104,
+          "azimuth": 217.6,
+          "facade_area_m2": 15238.0,
+          "side": "SW"
+        },
+        {
+          "sharpness": 3.73,
+          "regularity": 0.489,
+          "reg_v": 0.446,
+          "reg_h": 0.531,
+          "px": 1140306,
+          "azimuth": 37.6,
+          "facade_area_m2": 15217.0,
+          "side": "NE"
+        },
+        {
+          "sharpness": 9.99,
+          "regularity": 0.69,
+          "reg_v": 0.589,
+          "reg_h": 0.791,
+          "px": 653085,
+          "azimuth": 127.7,
+          "facade_area_m2": 8493.0,
+          "side": "SE"
+        },
+        {
+          "sharpness": 3.55,
+          "regularity": 0.579,
+          "reg_v": 0.619,
+          "reg_h": 0.54,
+          "px": 596187,
+          "azimuth": 307.5,
+          "facade_area_m2": 8462.0,
+          "side": "NW"
+        }
+      ],
+      "texel_density_px_per_m": 6.14,
+      "facade_dirs": [
+        {
+          "azimuth": 217.6,
+          "area_m2": 15238.0,
+          "side": "SW"
+        },
+        {
+          "azimuth": 37.6,
+          "area_m2": 15217.0,
+          "side": "NE"
+        },
+        {
+          "azimuth": 127.7,
+          "area_m2": 8493.0,
+          "side": "SE"
+        },
+        {
+          "azimuth": 307.5,
+          "area_m2": 8462.0,
+          "side": "NW"
+        }
+      ],
+      "facade_png_views": [
+        {
+          "azimuth": 217.6,
+          "side": "SW"
+        },
+        {
+          "azimuth": 127.7,
+          "side": "SE"
+        }
+      ]
+    },
+    "base_gap_check": {
+      "n": 114,
+      "pkg_bottom_minus_street_median": -0.48,
+      "pkg_bottom_minus_street_p90": 2.49,
+      "frac_float_gt_1m": 0.219,
+      "frac_tool_cut_gt_1m": 0.193,
+      "frac_src_hole_gt_1m": 0.061,
+      "frac_below_street_gt_1m": 0.018,
+      "tool_cut_points": [
+        [
+          -91.2,
+          -97.4,
+          6.42,
+          57.57,
+          30.24,
+          63.49
+        ],
+        [
+          -81.9,
+          -90.3,
+          2.49,
+          56.8,
+          40.44,
+          58.8
+        ],
+        [
+          -75.8,
+          -85.5,
+          3.01,
+          56.42,
+          23.13,
+          58.93
+        ],
+        [
+          -71.1,
+          -81.9,
+          3.07,
+          56.35,
+          23.21,
+          58.92
+        ],
+        [
+          -61.9,
+          -74.6,
+          3.2,
+          56.45,
+          26.93,
+          59.15
+        ],
+        [
+          -55.8,
+          -69.8,
+          2.96,
+          56.58,
+          26.93,
+          59.04
+        ],
+        [
+          -45.1,
+          -61.4,
+          2.8,
+          56.59,
+          45.65,
+          58.88
+        ],
+        [
+          -47.3,
+          -50.2,
+          7.42,
+          56.91,
+          23.56,
+          63.83
+        ],
+        [
+          -50.9,
+          -45.6,
+          7.55,
+          56.81,
+          30.08,
+          63.86
+        ],
+        [
+          -54.5,
+          -40.9,
+          2.69,
+          56.81,
+          30.08,
+          59.0
+        ],
+        [
+          -71.2,
+          -32.3,
+          2.93,
+          56.94,
+          30.17,
+          59.37
+        ],
+        [
+          -75.8,
+          -35.9,
+          2.81,
+          57.06,
+          36.34,
+          59.37
+        ],
+        [
+          -88.2,
+          -45.6,
+          7.26,
+          57.04,
+          23.89,
+          63.79
+        ],
+        [
+          -89.8,
+          -46.8,
+          2.8,
+          57.02,
+          54.64,
+          59.32
+        ],
+        [
+          -96.0,
+          -51.6,
+          7.29,
+          57.12,
+          23.83,
+          63.91
+        ],
+        [
+          -105.3,
+          -58.8,
+          2.94,
+          57.01,
+          40.66,
+          59.45
+        ],
+        [
+          -109.9,
+          -62.4,
+          2.88,
+          57.02,
+          23.38,
+          59.41
+        ],
+        [
+          -113.7,
+          -78.9,
+          2.5,
+          57.36,
+          39.89,
+          59.37
+        ],
+        [
+          -107.8,
+          -86.6,
+          1.78,
+          58.05,
+          23.16,
+          59.34
+        ],
+        [
+          -103.0,
+          -92.8,
+          2.91,
+          56.91,
+          40.1,
+          59.32
+        ],
+        [
+          -99.4,
+          -97.5,
+          25.71,
+          56.48,
+          30.11,
+          81.68
+        ],
+        [
+          -98.2,
+          -99.0,
+          7.44,
+          56.48,
+          36.57,
+          63.42
+        ]
+      ],
+      "note": "ported from shibuya make_final_packages.base_gap_check; tool_cut_points = [x, z, cut gap, street, src wall bottom, pkg bottom]"
+    },
+    "facade_coverage": {
+      "overall": 0.993,
+      "edges": [
+        {
+          "edge": 0,
+          "side": "NE",
+          "length_m": 7.8,
+          "street_y": 57.71,
+          "coverage": 1.0,
+          "cells": 1672
+        },
+        {
+          "edge": 1,
+          "side": "NE",
+          "length_m": 60.5,
+          "street_y": 56.4,
+          "coverage": 1.0,
+          "cells": 12823
+        },
+        {
+          "edge": 4,
+          "side": "SE",
+          "length_m": 35.2,
+          "street_y": 56.88,
+          "coverage": 1.0,
+          "cells": 7560
+        },
+        {
+          "edge": 7,
+          "side": "SW",
+          "length_m": 6.1,
+          "street_y": 56.97,
+          "coverage": 0.982,
+          "cells": 1470
+        },
+        {
+          "edge": 8,
+          "side": "SW",
+          "length_m": 60.9,
+          "street_y": 57.02,
+          "coverage": 1.0,
+          "cells": 12810
+        },
+        {
+          "edge": 11,
+          "side": "NW",
+          "length_m": 33.2,
+          "street_y": 56.94,
+          "coverage": 0.958,
+          "cells": 7140
+        }
+      ],
+      "note": "share of 1x1 m wall cells (street+1 m .. local top-1 m) with steep package surface within -1.2..+0.6 m of each footprint edge (length-weighted overall)"
+    },
+    "facade_coverage_pkg": {
+      "overall": 0.993,
+      "edges": [
+        {
+          "edge": 0,
+          "length_m": 7.8,
+          "coverage": 1.0
+        },
+        {
+          "edge": 1,
+          "length_m": 60.5,
+          "coverage": 1.0
+        },
+        {
+          "edge": 4,
+          "length_m": 35.2,
+          "coverage": 1.0
+        },
+        {
+          "edge": 7,
+          "length_m": 6.1,
+          "coverage": 0.982
+        },
+        {
+          "edge": 8,
+          "length_m": 60.9,
+          "coverage": 1.0
+        },
+        {
+          "edge": 11,
+          "length_m": 33.2,
+          "coverage": 0.958
+        }
+      ],
+      "note": "share of 1x1 m wall cells (package ground + 1 m .. local top - 1 m) on footprint edges >= 5 m with steep package surface within -1.2..+0.6 m"
+    },
+    "closure_profile": {
+      "min_closure_above_2m": 0.949,
+      "mean_closure_above_2m": 0.998,
+      "max_outside_share": 0.0,
+      "rows": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          1.0,
+          0.0
+        ],
+        [
+          4.0,
+          1.0,
+          0.0
+        ],
+        [
+          6.0,
+          1.0,
+          0.0
+        ],
+        [
+          8.0,
+          1.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0,
+          0.0
+        ],
+        [
+          12.0,
+          0.998,
+          0.0
+        ],
+        [
+          14.0,
+          1.0,
+          0.0
+        ],
+        [
+          16.0,
+          1.0,
+          0.0
+        ],
+        [
+          18.0,
+          1.0,
+          0.0
+        ],
+        [
+          20.0,
+          1.0,
+          0.0
+        ],
+        [
+          22.0,
+          1.0,
+          0.0
+        ],
+        [
+          24.0,
+          1.0,
+          0.0
+        ],
+        [
+          26.0,
+          1.0,
+          0.0
+        ],
+        [
+          28.0,
+          1.0,
+          0.0
+        ],
+        [
+          30.0,
+          1.0,
+          0.0
+        ],
+        [
+          32.0,
+          1.0,
+          0.0
+        ],
+        [
+          34.0,
+          1.0,
+          0.0
+        ],
+        [
+          36.0,
+          0.996,
+          0.0
+        ],
+        [
+          38.0,
+          1.0,
+          0.0
+        ],
+        [
+          40.0,
+          0.993,
+          0.0
+        ],
+        [
+          42.0,
+          0.987,
+          0.0
+        ],
+        [
+          44.0,
+          0.971,
+          0.0
+        ],
+        [
+          46.0,
+          0.969,
+          0.0
+        ],
+        [
+          48.0,
+          0.963,
+          0.0
+        ],
+        [
+          50.0,
+          0.949,
+          0.0
+        ],
+        [
+          52.0,
+          0.985,
+          0.0
+        ],
+        [
+          54.0,
+          0.998,
+          0.0
+        ],
+        [
+          56.0,
+          0.998,
+          0.0
+        ],
+        [
+          58.0,
+          0.998,
+          0.0
+        ],
+        [
+          60.0,
+          0.998,
+          0.0
+        ],
+        [
+          62.0,
+          1.0,
+          0.0
+        ],
+        [
+          64.0,
+          1.0,
+          0.0
+        ],
+        [
+          66.0,
+          1.0,
+          0.0
+        ],
+        [
+          68.0,
+          1.0,
+          0.0
+        ],
+        [
+          70.0,
+          1.0,
+          0.0
+        ],
+        [
+          72.0,
+          1.0,
+          0.0
+        ],
+        [
+          74.0,
+          1.0,
+          0.0
+        ],
+        [
+          76.0,
+          1.0,
+          0.0
+        ],
+        [
+          78.0,
+          1.0,
+          0.0
+        ],
+        [
+          80.0,
+          1.0,
+          0.0
+        ],
+        [
+          82.0,
+          1.0,
+          0.0
+        ],
+        [
+          84.0,
+          1.0,
+          0.0
+        ],
+        [
+          86.0,
+          1.0,
+          0.0
+        ],
+        [
+          88.0,
+          1.0,
+          0.0
+        ],
+        [
+          90.0,
+          1.0,
+          0.0
+        ],
+        [
+          92.0,
+          1.0,
+          0.0
+        ],
+        [
+          94.0,
+          1.0,
+          0.0
+        ],
+        [
+          96.0,
+          1.0,
+          0.0
+        ],
+        [
+          98.0,
+          1.0,
+          0.0
+        ],
+        [
+          100.0,
+          1.0,
+          0.0
+        ],
+        [
+          102.0,
+          1.0,
+          0.0
+        ],
+        [
+          104.0,
+          1.0,
+          0.0
+        ],
+        [
+          106.0,
+          1.0,
+          0.0
+        ],
+        [
+          108.0,
+          1.0,
+          0.0
+        ],
+        [
+          110.0,
+          1.0,
+          0.0
+        ],
+        [
+          112.0,
+          1.0,
+          0.0
+        ],
+        [
+          114.0,
+          1.0,
+          0.0
+        ],
+        [
+          116.0,
+          1.0,
+          0.0
+        ],
+        [
+          118.0,
+          1.0,
+          0.0
+        ],
+        [
+          120.0,
+          1.0,
+          0.0
+        ],
+        [
+          122.0,
+          1.0,
+          0.0
+        ],
+        [
+          124.0,
+          1.0,
+          0.0
+        ],
+        [
+          126.0,
+          1.0,
+          0.0
+        ],
+        [
+          128.0,
+          1.0,
+          0.0
+        ],
+        [
+          130.0,
+          1.0,
+          0.0
+        ],
+        [
+          132.0,
+          1.0,
+          0.0
+        ],
+        [
+          134.0,
+          1.0,
+          0.0
+        ],
+        [
+          136.0,
+          1.0,
+          0.0
+        ],
+        [
+          138.0,
+          1.0,
+          0.0
+        ],
+        [
+          140.0,
+          1.0,
+          0.0
+        ],
+        [
+          142.0,
+          1.0,
+          0.0
+        ],
+        [
+          144.0,
+          1.0,
+          0.0
+        ],
+        [
+          146.0,
+          1.0,
+          0.0
+        ],
+        [
+          148.0,
+          1.0,
+          0.0
+        ],
+        [
+          150.0,
+          1.0,
+          0.0
+        ],
+        [
+          152.0,
+          1.0,
+          0.0
+        ],
+        [
+          154.0,
+          1.0,
+          0.0
+        ],
+        [
+          156.0,
+          1.0,
+          0.0
+        ],
+        [
+          158.0,
+          1.0,
+          0.0
+        ],
+        [
+          160.0,
+          1.0,
+          0.0
+        ],
+        [
+          162.0,
+          1.0,
+          0.0
+        ],
+        [
+          164.0,
+          1.0,
+          0.0
+        ],
+        [
+          166.0,
+          1.0,
+          0.0
+        ],
+        [
+          168.0,
+          1.0,
+          0.0
+        ],
+        [
+          170.0,
+          1.0,
+          0.0
+        ],
+        [
+          172.0,
+          1.0,
+          0.0
+        ],
+        [
+          174.0,
+          1.0,
+          0.0
+        ],
+        [
+          176.0,
+          1.0,
+          0.0
+        ],
+        [
+          178.0,
+          1.0,
+          0.0
+        ],
+        [
+          180.0,
+          1.0,
+          0.0
+        ],
+        [
+          182.0,
+          1.0,
+          0.0
+        ],
+        [
+          184.0,
+          1.0,
+          0.0
+        ],
+        [
+          186.0,
+          1.0,
+          0.0
+        ],
+        [
+          188.0,
+          1.0,
+          0.0
+        ],
+        [
+          190.0,
+          1.0,
+          0.0
+        ],
+        [
+          192.0,
+          1.0,
+          0.0
+        ],
+        [
+          194.0,
+          1.0,
+          0.0
+        ],
+        [
+          196.0,
+          1.0,
+          0.0
+        ],
+        [
+          198.0,
+          1.0,
+          0.0
+        ],
+        [
+          200.0,
+          1.0,
+          0.0
+        ],
+        [
+          202.0,
+          1.0,
+          0.0
+        ],
+        [
+          204.0,
+          1.0,
+          0.0
+        ],
+        [
+          206.0,
+          1.0,
+          0.0
+        ],
+        [
+          208.0,
+          1.0,
+          0.0
+        ],
+        [
+          210.0,
+          1.0,
+          0.0
+        ],
+        [
+          212.0,
+          0.89,
+          0.0
+        ],
+        [
+          214.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "note": "rows = [m above package ground, closure, share of steep surface > 1.5 m outside the mid-height hull]; body = 2 m .. 90 % of the height"
+    }
+  },
+  "options": {
+    "buffer": 0.4,
+    "ground_tol": 1.0,
+    "ground_test": "centroid",
+    "field_band": [
+      1.0,
+      8.0
+    ],
+    "field_cell": 0.5,
+    "field_max_resid": 1.5,
+    "field_prior_dist": 10.0,
+    "ground_cos": 0.85,
+    "flat_tol": 0.25,
+    "sem_road_tol": 3.0,
+    "cut_below": true,
+    "below_margin": 0.5,
+    "ground_mode": "field",
+    "ground_band": [
+      1.0,
+      12.0
+    ],
+    "frag_link": 0.5,
+    "frag_min_area": 2.0,
+    "frag_low_h": 2.5,
+    "frag_low_rel": 0.05,
+    "frag_rel": 0.0,
+    "weld_tol": 0.0001,
+    "tex_pad": 4,
+    "tex_dilate": 4,
+    "max_uv_ext_px": 512.0,
+    "max_tex_width": 8192,
+    "write_normals": false,
+    "cull_interior": true,
+    "cull_dirs": 128,
+    "cull_min_elev": -30.0,
+    "cull_res": null,
+    "cull_max_px": 3000,
+    "cull_tol": 0.15,
+    "floor_h": 2.5,
+    "floor_cover": 2.0,
+    "needle_alt": 0.15,
+    "needle_len": 0.5,
+    "qa": true,
+    "qa_band": 1.0
+  },
+  "timings_s": {
+    "buffer": 0.031,
+    "cut": 0.031,
+    "ground": 0.404,
+    "fragments": 0.255,
+    "cull": 3.503,
+    "dedup": 0.022,
+    "texture": 0.575,
+    "qa": 0.239,
+    "write": 0.238,
+    "total": 5.355
+  },
+  "city": "LA Downtown (LA_Downtown_large_ctr_packed)",
+  "identity": null,
+  "known_as": "City National Plaza north tower (CITY NATIONAL BANK signage)",
+  "street_y": 56.949,
+  "base_cut_above_street_m": null,
+  "selection": {
+    "judge_scores": {
+      "shape": 9.5,
+      "windows": 6.0,
+      "extraction": 8.5,
+      "aggregate": 7.975
+    },
+    "why": "The most perfect cuboid in both cities: 70 x 39 m, 217 m, every cross-section fills 98 % of its rectangle from 2 % to 95 % of the height, flat roof, free-standing. Regular punched-window grid on all sides (crisp on SW / SE).",
+    "remaining_issues": "NE / NW faces are dark navy glass: the window grid is countable but low-contrast. Dark reflection blob at the SW base; recessed ground-floor arcade (package bottom up to ~2.5 m above the street on part of the perimeter)."
+  },
+  "produced_by": "selected_buildings/make_selected.py (city tool chain: la_split/extract_building.py; settings = shibuya make_final_packages.py OPTS + NEIGHBOUR_RULE)",
+  "neighbour_rule": {
+    "touch": 1.5,
+    "taller_dh": 2.0,
+    "taller_margin": 0.5,
+    "lower_margin": 0.0
+  },
+  "exclusions": [],
+  "height_above_street_m": 216.86
+}
