@@ -12,6 +12,11 @@ This repository provides a demo implementation for applying spatially controlled
 
 The pipeline converts atlas textures into facade-aligned images, generates structure and heatmap guidance, performs diffusion-based fire appearance stylization, and reconstructs the results into the original texture atlas.
 
+## Demo overview
+<p align="center">
+  <img src="figure/Demo_overview.png" width="900">
+</p>
+
 ## Tested environment:
 - Ubuntu 22.04
 - NVIDIA RTX 4090 24 GB
