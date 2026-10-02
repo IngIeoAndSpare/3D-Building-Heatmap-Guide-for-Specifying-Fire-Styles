@@ -37,6 +37,8 @@ pip install --upgrade pip
 pip install torch==2.6.0 torchvision==0.21.0 \
     --index-url https://download.pytorch.org/whl/cu124
 
+# Install the diffusion engine (ComfyUI and its custom nodes at fixed commits) and SAM 2
+# no weights are downloaded
 bash scripts/setup_engine.sh
 pip install -r requirements.txt
 ```
@@ -45,6 +47,9 @@ The setup script installs the ComfyUI-based inference engine and the required
 external components used by the demo.
 
 ## Model Weights
+
+scripts/download_models.sh downloads these files automatically.
+To download them by hand instead, get each file from its Source and save it under engine/ComfyUI/<Destination>.
 
 The following pretrained model weights are required.
 
